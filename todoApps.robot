@@ -43,8 +43,6 @@ Change Title Todo
     I See The Header Title Is Visible
     I See The Activity Title Is Visible
     I See The Add Button Is Visible
-    # I Click The Add Activity Button
-    # The New Activity Item Will Be Shown
     I Click One Activity Card to See The Activity Detail
     I See To Do Empty State
     I See To Do Add Button
