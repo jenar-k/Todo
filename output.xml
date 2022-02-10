@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 09:31:12.070" rpa="false" schemaversion="2">
+<suite id="s1" name="todoApps" source="D:\Robot\Todo\todoApps.robot">
+<kw name="Open Chrome" library="todoAppsKeywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220210 09:31:12.289" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220210 09:31:12.289" endtime="20220210 09:31:13.850"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220210 09:31:13.850" endtime="20220210 09:31:14.005"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:12.289" endtime="20220210 09:31:14.005"/>
+</kw>
+<test id="s1-t1" name="Display the main page of the todo application">
+<kw name="Open To Do List App" library="todoAppsKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://ivan-todo-devrank.netlify.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220210 09:31:14.009" level="INFO">Opening url 'https://ivan-todo-devrank.netlify.app/'</msg>
+<status status="PASS" starttime="20220210 09:31:14.009" endtime="20220210 09:31:19.626"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:14.008" endtime="20220210 09:31:19.626"/>
+</kw>
+<kw name="I See The Header Title Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${headerTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:19.629" endtime="20220210 09:31:19.670"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:19.628" endtime="20220210 09:31:19.670"/>
+</kw>
+<kw name="I See The Activity Title Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:19.672" endtime="20220210 09:31:19.708"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:19.671" endtime="20220210 09:31:19.708"/>
+</kw>
+<kw name="I See The Add Button Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityAddButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:19.709" endtime="20220210 09:31:19.738"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:19.708" endtime="20220210 09:31:19.738"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:14.005" endtime="20220210 09:31:19.738"/>
+</test>
+<test id="s1-t2" name="Adding New Activity">
+<kw name="Open To Do List App" library="todoAppsKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://ivan-todo-devrank.netlify.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220210 09:31:19.740" level="INFO">Opening url 'https://ivan-todo-devrank.netlify.app/'</msg>
+<status status="PASS" starttime="20220210 09:31:19.740" endtime="20220210 09:31:21.822"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:19.740" endtime="20220210 09:31:21.822"/>
+</kw>
+<kw name="I See The Header Title Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${headerTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:21.825" endtime="20220210 09:31:21.853"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:21.823" endtime="20220210 09:31:21.853"/>
+</kw>
+<kw name="I See The Activity Title Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:21.856" endtime="20220210 09:31:21.881"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:21.854" endtime="20220210 09:31:21.881"/>
+</kw>
+<kw name="I See The Add Button Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityAddButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:21.884" endtime="20220210 09:31:21.912"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:21.883" endtime="20220210 09:31:21.913"/>
+</kw>
+<kw name="I Click The Add Activity Button" library="todoAppsKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${activityAddButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220210 09:31:21.915" level="INFO">Clicking button '//*[@data-cy="activity-add-button"]'.</msg>
+<status status="PASS" starttime="20220210 09:31:21.915" endtime="20220210 09:31:22.005"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:21.914" endtime="20220210 09:31:22.005"/>
+</kw>
+<kw name="The New Activity Item Will Be Shown" library="todoAppsKeywords">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${activityItemTitle}</arg>
+<arg>New Activity</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220210 09:31:22.007" endtime="20220210 09:31:22.040"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${activityItemDate}</arg>
+<arg>10 Februari 2022</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220210 09:31:22.040" endtime="20220210 09:31:22.315"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:22.006" endtime="20220210 09:31:22.315"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:19.739" endtime="20220210 09:31:22.315"/>
+</test>
+<test id="s1-t3" name="Delete Recently Added Activity">
+<kw name="Open To Do List App" library="todoAppsKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://ivan-todo-devrank.netlify.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220210 09:31:22.320" level="INFO">Opening url 'https://ivan-todo-devrank.netlify.app/'</msg>
+<status status="PASS" starttime="20220210 09:31:22.320" endtime="20220210 09:31:24.372"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:22.319" endtime="20220210 09:31:24.372"/>
+</kw>
+<kw name="I See The Header Title Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${headerTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:24.374" endtime="20220210 09:31:24.403"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:24.373" endtime="20220210 09:31:24.403"/>
+</kw>
+<kw name="I See The Activity Title Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:24.406" endtime="20220210 09:31:24.431"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:24.404" endtime="20220210 09:31:24.432"/>
+</kw>
+<kw name="I See The Add Button Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityAddButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:24.434" endtime="20220210 09:31:24.461"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:24.433" endtime="20220210 09:31:24.462"/>
+</kw>
+<kw name="I Click The Trash Icon Button" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityItemDeleteButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:24.463" endtime="20220210 09:31:24.494"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${activityItemDeleteButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220210 09:31:24.495" level="INFO">Clicking element '(//*[@data-cy="activity-item-delete-button"])[1]'.</msg>
+<status status="PASS" starttime="20220210 09:31:24.494" endtime="20220210 09:31:24.569"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:24.462" endtime="20220210 09:31:24.569"/>
+</kw>
+<kw name="I See the PopUp Delete" library="todoAppsKeywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${popupDelete}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220210 09:31:24.851" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220210 09:31:24.856" level="FAIL">The element '//*[@data-cy='modal-delete']' should be visible, but it is not.</msg>
+<status status="FAIL" starttime="20220210 09:31:24.571" endtime="20220210 09:31:24.856"/>
+</kw>
+<status status="FAIL" starttime="20220210 09:31:24.570" endtime="20220210 09:31:24.858"/>
+</kw>
+<kw name="I Click The Delete Confirm Button to Delete Activity" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:24.859" endtime="20220210 09:31:24.859"/>
+</kw>
+<status status="FAIL" starttime="20220210 09:31:22.318" endtime="20220210 09:31:24.860">The element '//*[@data-cy='modal-delete']' should be visible, but it is not.</status>
+</test>
+<test id="s1-t4" name="Showing Activity Detail Where Recently Added">
+<kw name="Open To Do List App" library="todoAppsKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://ivan-todo-devrank.netlify.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220210 09:31:24.866" level="INFO">Opening url 'https://ivan-todo-devrank.netlify.app/'</msg>
+<status status="PASS" starttime="20220210 09:31:24.865" endtime="20220210 09:31:26.638"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:24.865" endtime="20220210 09:31:26.638"/>
+</kw>
+<kw name="I See The Header Title Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${headerTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:26.640" endtime="20220210 09:31:26.670"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:26.639" endtime="20220210 09:31:26.670"/>
+</kw>
+<kw name="I See The Activity Title Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:26.672" endtime="20220210 09:31:26.700"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:26.671" endtime="20220210 09:31:26.701"/>
+</kw>
+<kw name="I See The Add Button Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityAddButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:26.702" endtime="20220210 09:31:26.733"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:26.702" endtime="20220210 09:31:26.733"/>
+</kw>
+<kw name="I Click The Add Activity Button" library="todoAppsKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${activityAddButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220210 09:31:26.735" level="INFO">Clicking button '//*[@data-cy="activity-add-button"]'.</msg>
+<status status="PASS" starttime="20220210 09:31:26.735" endtime="20220210 09:31:26.815"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:26.734" endtime="20220210 09:31:26.815"/>
+</kw>
+<kw name="The New Activity Item Will Be Shown" library="todoAppsKeywords">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${activityItemTitle}</arg>
+<arg>New Activity</arg>
+<arg>3</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220210 09:31:26.817" endtime="20220210 09:31:26.848"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${activityItemDate}</arg>
+<arg>10 Februari 2022</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20220210 09:31:26.848" endtime="20220210 09:31:27.101"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:26.816" endtime="20220210 09:31:27.101"/>
+</kw>
+<kw name="I Click One Activity Card to See The Activity Detail" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityItem}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:27.103" endtime="20220210 09:31:27.133"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${activityItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220210 09:31:27.134" level="INFO">Clicking element '(//*[@data-cy="activity-item"])[1]'.</msg>
+<status status="PASS" starttime="20220210 09:31:27.134" endtime="20220210 09:31:27.197"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:27.102" endtime="20220210 09:31:27.197"/>
+</kw>
+<kw name="I See To Do Empty State" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${todoEmptyState}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:27.199" endtime="20220210 09:31:28.566"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:27.198" endtime="20220210 09:31:28.566"/>
+</kw>
+<kw name="I See To Do Add Button" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${todoAddButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:28.568" endtime="20220210 09:31:28.603"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:28.567" endtime="20220210 09:31:28.604"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:24.863" endtime="20220210 09:31:28.605"/>
+</test>
+<test id="s1-t5" name="Change Title Todo">
+<kw name="Open To Do List App" library="todoAppsKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://ivan-todo-devrank.netlify.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220210 09:31:28.610" level="INFO">Opening url 'https://ivan-todo-devrank.netlify.app/'</msg>
+<status status="PASS" starttime="20220210 09:31:28.610" endtime="20220210 09:31:30.784"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:28.609" endtime="20220210 09:31:30.785"/>
+</kw>
+<kw name="I See The Header Title Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${headerTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:30.786" endtime="20220210 09:31:30.813"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:30.786" endtime="20220210 09:31:30.814"/>
+</kw>
+<kw name="I See The Activity Title Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:30.815" endtime="20220210 09:31:30.842"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:30.814" endtime="20220210 09:31:30.843"/>
+</kw>
+<kw name="I See The Add Button Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityAddButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:30.844" endtime="20220210 09:31:30.866"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:30.844" endtime="20220210 09:31:30.866"/>
+</kw>
+<kw name="I Click One Activity Card to See The Activity Detail" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityItem}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:30.867" endtime="20220210 09:31:30.890"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${activityItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220210 09:31:30.891" level="INFO">Clicking element '(//*[@data-cy="activity-item"])[1]'.</msg>
+<status status="PASS" starttime="20220210 09:31:30.890" endtime="20220210 09:31:30.945"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:30.866" endtime="20220210 09:31:30.945"/>
+</kw>
+<kw name="I See To Do Empty State" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${todoEmptyState}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:30.947" endtime="20220210 09:31:31.865"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:30.947" endtime="20220210 09:31:31.866"/>
+</kw>
+<kw name="I See To Do Add Button" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${todoAddButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:31.868" endtime="20220210 09:31:31.897"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:31.867" endtime="20220210 09:31:31.897"/>
+</kw>
+<kw name="I See New Ativity Title" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${todoTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:31.899" endtime="20220210 09:31:31.926"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:31.898" endtime="20220210 09:31:31.926"/>
+</kw>
+<kw name="I Click the Edit Title Todo Button" library="todoAppsKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${todoEditButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220210 09:31:31.929" level="INFO">Clicking element '//*[@data-cy="todo-title-edit-button"]'.</msg>
+<status status="PASS" starttime="20220210 09:31:31.928" endtime="20220210 09:31:31.984"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220210 09:31:33.999" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220210 09:31:31.985" endtime="20220210 09:31:33.999"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:31.927" endtime="20220210 09:31:33.999"/>
+</kw>
+<kw name="I Clear The Element" library="todoAppsKeywords">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${titleNewActivity}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220210 09:31:34.000" endtime="20220210 09:31:34.068"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:34.000" endtime="20220210 09:31:34.069"/>
+</kw>
+<kw name="I am Inputing The Text for New To Do Title" library="todoAppsKeywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${titleNewActivity}</arg>
+<arg>A New Activity Title (Jenar)</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220210 09:31:34.071" level="INFO">Typing text 'A New Activity Title (Jenar)' into text field '//*[@value="New Activity"]'.</msg>
+<msg timestamp="20220210 09:31:34.255" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220210 09:31:34.261" level="FAIL">Element with locator '//*[@value="New Activity"]' not found.</msg>
+<status status="FAIL" starttime="20220210 09:31:34.071" endtime="20220210 09:31:34.261"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220210 09:31:34.262" endtime="20220210 09:31:34.262"/>
+</kw>
+<status status="FAIL" starttime="20220210 09:31:34.070" endtime="20220210 09:31:34.264"/>
+</kw>
+<kw name="I Click the Edit Title Todo Button" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:34.265" endtime="20220210 09:31:34.265"/>
+</kw>
+<kw name="I Click Back Button" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:34.266" endtime="20220210 09:31:34.266"/>
+</kw>
+<status status="FAIL" starttime="20220210 09:31:28.608" endtime="20220210 09:31:34.267">Element with locator '//*[@value="New Activity"]' not found.</status>
+</test>
+<test id="s1-t6" name="Added Five To Do Items">
+<kw name="Open To Do List App" library="todoAppsKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://ivan-todo-devrank.netlify.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220210 09:31:34.273" level="INFO">Opening url 'https://ivan-todo-devrank.netlify.app/'</msg>
+<status status="PASS" starttime="20220210 09:31:34.272" endtime="20220210 09:31:36.567"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:34.272" endtime="20220210 09:31:36.567"/>
+</kw>
+<kw name="I See The Header Title Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${headerTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:36.569" endtime="20220210 09:31:36.597"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:36.569" endtime="20220210 09:31:36.597"/>
+</kw>
+<kw name="I See The Activity Title Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:36.600" endtime="20220210 09:31:36.627"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:36.599" endtime="20220210 09:31:36.627"/>
+</kw>
+<kw name="I See The Add Button Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityAddButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:36.630" endtime="20220210 09:31:36.660"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:36.629" endtime="20220210 09:31:36.660"/>
+</kw>
+<kw name="I Click One Activity Card to See The Activity Detail" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityItem}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:36.662" endtime="20220210 09:31:36.688"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${activityItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220210 09:31:36.690" level="INFO">Clicking element '(//*[@data-cy="activity-item"])[1]'.</msg>
+<status status="PASS" starttime="20220210 09:31:36.688" endtime="20220210 09:31:36.740"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:36.661" endtime="20220210 09:31:36.740"/>
+</kw>
+<kw name="I See To Do Empty State" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${todoEmptyState}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:36.741" endtime="20220210 09:31:37.651"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:36.740" endtime="20220210 09:31:37.651"/>
+</kw>
+<kw name="I See To Do Add Button" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${todoAddButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:37.653" endtime="20220210 09:31:37.681"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:37.652" endtime="20220210 09:31:37.682"/>
+</kw>
+<kw name="I Click To Do Add Button" library="todoAppsKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${todoAddButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220210 09:31:37.684" level="INFO">Clicking element '//*[@data-cy="todo-add-button"]'.</msg>
+<status status="PASS" starttime="20220210 09:31:37.683" endtime="20220210 09:31:37.770"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:37.682" endtime="20220210 09:31:37.770"/>
+</kw>
+<kw name="I See The PopUp &quot;Tambah List Item&quot;" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${popupAddListItem}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220210 09:31:43.061" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220210 09:31:43.064" level="FAIL">Element '//*[@data-cy="modal-add"]' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220210 09:31:37.771" endtime="20220210 09:31:43.064"/>
+</kw>
+<status status="FAIL" starttime="20220210 09:31:37.771" endtime="20220210 09:31:43.066"/>
+</kw>
+<kw name="I am Inputing Item Todo with Very Low Priority" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.068" endtime="20220210 09:31:43.068"/>
+</kw>
+<kw name="I am selecting Very Low Priority" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.069" endtime="20220210 09:31:43.069"/>
+</kw>
+<kw name="I Click Save Item To Do Button" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.069" endtime="20220210 09:31:43.069"/>
+</kw>
+<kw name="I Click To Do Add Button" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.070" endtime="20220210 09:31:43.070"/>
+</kw>
+<kw name="I See The PopUp &quot;Tambah List Item&quot;" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.070" endtime="20220210 09:31:43.070"/>
+</kw>
+<kw name="I am Inputing Item Todo with Low Priority" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.071" endtime="20220210 09:31:43.071"/>
+</kw>
+<kw name="I am selecting Low Priority" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.071" endtime="20220210 09:31:43.071"/>
+</kw>
+<kw name="I Click Save Item To Do Button" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.072" endtime="20220210 09:31:43.072"/>
+</kw>
+<kw name="I Click To Do Add Button" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.074" endtime="20220210 09:31:43.074"/>
+</kw>
+<kw name="I See The PopUp &quot;Tambah List Item&quot;" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.075" endtime="20220210 09:31:43.075"/>
+</kw>
+<kw name="I am Inputing Item Todo with Medium Priority" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.075" endtime="20220210 09:31:43.075"/>
+</kw>
+<kw name="I am selecting Medium Priority" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.076" endtime="20220210 09:31:43.076"/>
+</kw>
+<kw name="I Click Save Item To Do Button" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.077" endtime="20220210 09:31:43.077"/>
+</kw>
+<kw name="I Click To Do Add Button" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.077" endtime="20220210 09:31:43.077"/>
+</kw>
+<kw name="I See The PopUp &quot;Tambah List Item&quot;" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.078" endtime="20220210 09:31:43.078"/>
+</kw>
+<kw name="I am Inputing Item Todo with High Priority" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.078" endtime="20220210 09:31:43.078"/>
+</kw>
+<kw name="I am selecting High Priority" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.079" endtime="20220210 09:31:43.079"/>
+</kw>
+<kw name="I Click Save Item To Do Button" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.079" endtime="20220210 09:31:43.079"/>
+</kw>
+<kw name="I Click To Do Add Button" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.080" endtime="20220210 09:31:43.080"/>
+</kw>
+<kw name="I See The PopUp &quot;Tambah List Item&quot;" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.080" endtime="20220210 09:31:43.080"/>
+</kw>
+<kw name="I am Inputing Item Todo with Very High Priority" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.080" endtime="20220210 09:31:43.081"/>
+</kw>
+<kw name="I am selecting Very High Priority" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.082" endtime="20220210 09:31:43.082"/>
+</kw>
+<kw name="I Click Save Item To Do Button" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:43.083" endtime="20220210 09:31:43.083"/>
+</kw>
+<status status="FAIL" starttime="20220210 09:31:34.269" endtime="20220210 09:31:43.083">Element '//*[@data-cy="modal-add"]' not visible after 5 seconds.</status>
+</test>
+<test id="s1-t7" name="Filtering To Do items">
+<kw name="Open To Do List App" library="todoAppsKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://ivan-todo-devrank.netlify.app/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220210 09:31:43.089" level="INFO">Opening url 'https://ivan-todo-devrank.netlify.app/'</msg>
+<status status="PASS" starttime="20220210 09:31:43.088" endtime="20220210 09:31:44.899"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:43.087" endtime="20220210 09:31:44.899"/>
+</kw>
+<kw name="I See The Header Title Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${headerTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:44.901" endtime="20220210 09:31:44.930"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:44.900" endtime="20220210 09:31:44.930"/>
+</kw>
+<kw name="I See The Activity Title Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:44.932" endtime="20220210 09:31:44.958"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:44.931" endtime="20220210 09:31:44.960"/>
+</kw>
+<kw name="I See The Add Button Is Visible" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityAddButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:44.961" endtime="20220210 09:31:44.989"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:44.960" endtime="20220210 09:31:44.989"/>
+</kw>
+<kw name="I Click One Activity Card to See The Activity Detail" library="todoAppsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activityItem}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220210 09:31:44.991" endtime="20220210 09:31:45.024"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${activityItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220210 09:31:45.025" level="INFO">Clicking element '(//*[@data-cy="activity-item"])[1]'.</msg>
+<status status="PASS" starttime="20220210 09:31:45.024" endtime="20220210 09:31:45.085"/>
+</kw>
+<status status="PASS" starttime="20220210 09:31:44.991" endtime="20220210 09:31:45.085"/>
+</kw>
+<kw name="I Click Filtering Button And selecting &quot;Terlama&quot;" library="todoAppsKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${filteringButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220210 09:31:45.088" level="INFO">Clicking element '//*[@data-cy="todo-sort-button"]'.</msg>
+<msg timestamp="20220210 09:31:45.262" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220210 09:31:45.265" level="FAIL">Element with locator '//*[@data-cy="todo-sort-button"]' not found.</msg>
+<status status="FAIL" starttime="20220210 09:31:45.087" endtime="20220210 09:31:45.265"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${filterTerlama}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220210 09:31:45.266" endtime="20220210 09:31:45.266"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220210 09:31:45.266" endtime="20220210 09:31:45.266"/>
+</kw>
+<status status="FAIL" starttime="20220210 09:31:45.086" endtime="20220210 09:31:45.267"/>
+</kw>
+<kw name="I Click Filtering Button And selecting &quot;Terbaru&quot;" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:45.269" endtime="20220210 09:31:45.269"/>
+</kw>
+<kw name="I Click Filtering Button And selecting &quot;A-Z&quot;" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:45.270" endtime="20220210 09:31:45.270"/>
+</kw>
+<kw name="I Click Filtering Button And selecting &quot;Z-A&quot;" library="todoAppsKeywords">
+<status status="NOT RUN" starttime="20220210 09:31:45.270" endtime="20220210 09:31:45.270"/>
+</kw>
+<status status="FAIL" starttime="20220210 09:31:43.087" endtime="20220210 09:31:45.271">Element with locator '//*[@data-cy="todo-sort-button"]' not found.</status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220210 09:31:45.274" endtime="20220210 09:31:47.765"/>
+</kw>
+<status status="FAIL" starttime="20220210 09:31:12.072" endtime="20220210 09:31:47.765"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="4" skip="0" id="s1" name="todoApps">todoApps</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
