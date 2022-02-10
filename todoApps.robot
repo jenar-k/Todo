@@ -98,11 +98,9 @@ Filtering To Do items
     I Click Filtering Button And selecting "A-Z" 
     I Click Filtering Button And selecting "Z-A" 
 
-# Marking "Finish" one of the todo items
-#     Open To Do List App
-#     I See The Header Title Is Visible
-#     I See The Activity Title Is Visible
-#     I See The Add Button Is Visible
-#     I Click One Activity Card to See The Activity Detail
-#     I Click One To Do Item to marking "Finish"
-#     I Click Filtering Button And selecting "Belum Selesai" 
+Marking "Finish" one of the todo items
+    Open To Do List App
+    I See The Header Title Is Visible
+    I See The Activity Title Is Visible
+    I See The Add Button Is Visible
+    I Click One Activity Card to See The Activity Detail
